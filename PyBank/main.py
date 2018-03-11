@@ -21,7 +21,6 @@ with open(csvpath, newline='') as csvfile:
 
     '''Find total number of months, total revenue, greatest increase and decrease in revenue'''
     #initialize variables
-    months = 0
     revenue = 0
     greatest_inc = 0
     greatest_dec = 0
