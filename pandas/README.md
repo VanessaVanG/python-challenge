@@ -109,9 +109,7 @@ purch_anls_tot_df
 
 
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
+
     }
 
     .dataframe thead th {
