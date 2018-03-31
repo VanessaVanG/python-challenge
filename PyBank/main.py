@@ -1,27 +1,28 @@
 '''Vanessa Van Gilder
 PyBank'''
 
+#import libraries
 import os
 import csv
 import statistics
 
-#Store file name in variable
+#store file name in variable
 file_name = 'budget_data_1.csv'
 
-#Path to collect the data
+#path to collect the data
 csvpath = os.path.join('Resources', file_name)
 
+#read in the file
 with open(csvpath, newline='') as csvfile:
 
-    #Split at the commas
+    #split at the commas
     csvreader = csv.reader(csvfile, delimiter=',')
 
-    # skip the headers
+    #skip the headers
     next(csvreader, None)
 
     '''Find total number of months, total revenue, greatest increase and decrease in revenue'''
     #initialize variables
-    months = 0
     revenue = 0
     greatest_inc = 0
     greatest_dec = 0
@@ -33,13 +34,13 @@ with open(csvpath, newline='') as csvfile:
         #add each month's revenue
         revenue += int(row[1])
 
-        #Find the greatest increase in revenue
+        #find the greatest increase in revenue
         if int(row[1]) > greatest_inc:
             greatest_inc = int(row[1])
             #grab the date as well
             greatest_inc_date = row[0]
 
-        #Find the greatest decrease in revenue
+        #find the greatest decrease in revenue
         if int(row[1]) < greatest_dec:
             greatest_dec = int(row[1])
             #grab the date as well
@@ -76,6 +77,8 @@ Greatest Decrease in Revenue: {} (${})
     #print to terminal
     print(output)
 
-    #export to text file named Financial_Analysis
-    print(output, file=open("Financial_Analysis.txt", "w"))
-    
+    #export to text file named Financial_Analysis, append
+    print(output, file=open("Financial_Analysis.txt", "a"))
+
+    #close the file
+    csvfile.close()
