@@ -1,6 +1,5 @@
 
 ## WeatherPy
-------
 ### Objective
 Build a series of scatter plots to showcase the following relationships:
 * Temperature (F) vs. Latitude
