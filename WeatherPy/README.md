@@ -97,7 +97,7 @@ for index, row in df.iterrows():
         info = data(*keys)
         df.at[index,'Max Temperature (F)'] = (info[0])
         df.at[index,'Humidity %'] = (int(info[1]))
-        df.at[index,'Cloudiness %'] = (info[2])
+        df.at[index,'Cloudiness %'] = (int(info[2]))
         df.at[index,'Wind Speed (mph)'] = (info[3])
         df.at[index,'City'] = (info[4])
         df.at[index,'Country'] = (info[5])
