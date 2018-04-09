@@ -8,8 +8,8 @@ following news organizations: BBC, CBS, CNN, Fox, and New York times.
 * Pull last 100 tweets from each outlet
 * Perform a vader sentiment analysis with the compound, positive, neutral, and negative scoring for each tweet
 * Pull into a DataFrame the tweet's source acount, its text, its date, and its compound, positive, neutral, and negative sentiment scores
-* Export the data in the DataFrame into a CSV file.
-* Save PNG images for each plot.
+* Export the data in the DataFrame into a CSV file
+* Save PNG images for each plot
 
 ### Analysis
 * Because this only pulls the last 100 tweets from each news organization, it should only be considered a snapshot. To get a better idea of actual sentiment, many more tweets over a number of days would need to be pulled.
